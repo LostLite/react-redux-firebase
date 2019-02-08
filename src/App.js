@@ -1,12 +1,17 @@
 import React, { Component } from 'react';
-import {BrowserRouter} from 'react-router-dom';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import Navbar from './component/layout/Navbar';
+import Dashboard from './component/dashboard/Dashboard';
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <div className="App">
-          <h1>my web app</h1>
+        <Navbar />
+        <Switch>
+          <Route path='/' component={Dashboard} />
+        </Switch>
         </div>
       </BrowserRouter>
       
